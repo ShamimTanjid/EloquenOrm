@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard <a href="" data-toggle="modal" data-target="#exampleModal"    class="btn btn-primary btn-sm float-right">Add Neww</a></div>
+                   <a href="{{route('newspost')}}" class="btn btn-sm float-right text-white bg-dark">News Post</a>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -39,7 +40,7 @@
                                                       <td>{{$row->description}}</td>
                                                       <td>{{$row->id}}</td>
                                                       <td>
-                                                      <a href="" class="btn btn-primary">Edit</a>   
+                                                      <a href="{{url('editpost/'.$row->id)}}" class="btn btn-primary">Edit</a>   
                                                       <a href="{{url('deletecontact/'.$row->id)}}" class="btn btn-success" id="delete">Delte</a>  
                                                       <a href="" class="btn btn-danger">View</a>    
                                                       </td>
